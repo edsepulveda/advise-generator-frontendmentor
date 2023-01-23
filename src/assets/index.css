@@ -1,0 +1,99 @@
+:root{
+  --color-primary-light-cyan:hsl(193, 38%, 86%);
+  --color-primary-neon-green:hsl(150, 100%, 66%);
+
+  --color-neutral-grayish-blue:hsl(217, 19%, 38%);
+  --color-neutral-darkgray-blue:hsl(217, 19%, 24%);
+  --color-neutral-dark-blue: hsl(218, 23%, 16%);
+
+  --fs-quote:28px;
+
+  --ff-manrope: 'Manrope', sans-serif;
+}
+
+body{
+  background-color: var(--color-neutral-dark-blue);
+  font-family: var(--ff-manrope);
+  overflow: hidden;
+  margin: 1rem;
+}
+
+.container{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-content{
+  background-color: var(--color-neutral-darkgray-blue);
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  border-radius: 0.8rem;
+}
+
+.heading{
+  color: var(--color-primary-neon-green);
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-size: 0.8rem;
+}
+
+.advice{
+  color: var(--color-primary-light-cyan);
+  font-size: var(--fs-quote);
+  max-width: 550px;
+  align-self: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.pattern{
+  margin-bottom: 4rem;
+  position: sticky;
+}
+
+button{
+  margin-top: 1rem;
+  border-radius: 50%;
+  padding: 1.2rem;
+  position: absolute;
+  left: 41%;
+  top: 85%;
+  background-color: var(--color-primary-neon-green);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  border: none;
+}
+
+button > img{
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+button:is(:focus, :hover){
+  box-shadow: 0 5px 30px hsl(150, 100%, 66%, 1);
+  outline: none;
+}
+
+button:disabled{
+  cursor: not-allowed;
+  background-color: gray;
+  box-shadow: none;
+}
+
+@media screen and (min-width: 750px){
+  button{
+    left: 45%;
+  }
+
+  .main-content{
+    padding: 2rem 2rem 1.5rem 2rem;
+  }
+
+  .pattern{
+    margin-top: 0.5rem;
+  }
+}
